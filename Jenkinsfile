@@ -32,17 +32,5 @@ pipeline {
         }
     }
 
-    post {
-        always {
-            junit '**/target/surefire-reports/*.xml' // Publish JUnit test results
-        }
 
-        success {
-            echo '✅ Build and tests passed!'
-        }
-
-        failure {
-            echo '❌ Build or tests failed!'
-        }
-    }
 }
